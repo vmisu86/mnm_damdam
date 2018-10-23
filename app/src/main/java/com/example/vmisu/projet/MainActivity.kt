@@ -9,9 +9,11 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.example.vmisu.projet.tool.replace
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -33,6 +35,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         replace(Cours())
         nav_view.setNavigationItemSelectedListener(this)
+
+        fun titelToast(view: View){
+            toast(R.string.app_name)
+        }
     }
 
     override fun onBackPressed() {

@@ -13,15 +13,17 @@
                 android:rowCount="4">
 
         <View
+                android:id="@+id/titleView"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/common_size"
                 android:layout_column="0"
                 android:layout_columnSpan="2"
                 android:layout_row="0"
-                android:background="@color/colorAccent"/>
+                android:background="@color/colorAccent"
+                android:onClick="titelToast"/>
 
         <View
-                android:id="@+id/emailView"
+                android:id="@+id/android_1"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_column="0"
@@ -32,6 +34,7 @@
                 android:background="@color/colorPrimaryDark" />
 
         <View
+                android:id="@+id/android_2"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_column="1"
@@ -42,6 +45,7 @@
                 android:background="@color/colorPrimary" />
 
         <View
+                android:id="@+id/android_3"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_column="0"
@@ -52,6 +56,7 @@
                 android:background="@color/color_3" />
 
         <View
+                android:id="@+id/android_4"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_column="0"
@@ -61,6 +66,7 @@
                 android:layout_rowWeight="1"
                 android:background="@color/color_1" />
         <View
+                android:id="@+id/android_5"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_column="1"
