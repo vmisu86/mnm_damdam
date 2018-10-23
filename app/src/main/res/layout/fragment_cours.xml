@@ -6,9 +6,72 @@
              tools:context=".Cours">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Cours Fragment" />
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:rowCount="4">
+
+        <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_size"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="0"
+                android:background="@color/colorAccent"/>
+
+        <View
+                android:id="@+id/emailView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:background="@color/colorPrimaryDark" />
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:background="@color/colorPrimary" />
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:background="@color/color_3" />
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_row="3"
+                android:layout_rowWeight="1"
+                android:background="@color/color_1" />
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_row="2"
+                android:layout_rowSpan="2"
+                android:layout_rowWeight="1"
+                android:background="@color/color_2" />
+
+
+    </GridLayout>
 
 </FrameLayout>
