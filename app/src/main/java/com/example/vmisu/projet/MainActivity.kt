@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
+        replace(Cours())
         nav_view.setNavigationItemSelectedListener(this)
     }
 
@@ -60,19 +61,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_cours -> {
+            R.id.nav_camera -> {
                 replace(Cours())
             }
-            R.id.nav_architecture -> {
+            R.id.nav_gallery -> {
                 replace(Architecture())
             }
-            R.id.nav_magicBall -> {
+            R.id.nav_slideshow -> {
 
             }
-            R.id.nav_liste -> {
-
-            }
-            R.id.nav_fragment -> {
+            R.id.nav_manage -> {
 
             }
             R.id.nav_send -> {
