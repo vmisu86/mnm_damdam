@@ -2,63 +2,54 @@ package com.example.vmisu.projet.cours
 
 
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.vmisu.projet.Cours
 
 import com.example.vmisu.projet.R
+import org.jetbrains.anko.find
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Cours_3.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
-class Cours_3 : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class Cours_3 : Fragment(),   View.OnClickListener {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cours_3, container, false)
+       // return inflater.inflate(R.layout.fragment_cours_3, container, false)
+        val view: View = inflater!!.inflate(R.layout.fragment_cours_3, container, false)
+
+        val fab_btn: FloatingActionButton = view.find(R.id.fab)
+
+        fab_btn.setOnClickListener (this)
+
+        return view
     }
 
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Cours_3.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Cours_3().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.fab -> {
+                //Toast.makeText(getActivity(), "Clicked on cours 5!", Toast.LENGTH_SHORT).show()
+
+                // Create new fragment and transaction
+                val newFragment = Cours()
+                val transaction = fragmentManager!!.beginTransaction()
+
+                // Replace whatever is in the fragment_container view with this fragment,
+                // and add the transaction to the back stack if needed
+                transaction.replace(R.id.content, newFragment)
+                transaction.addToBackStack(null)
+
+                // Commit the transaction
+                transaction.commit()
             }
+        }
     }
 }
