@@ -3,17 +3,16 @@ package com.example.vmisu.projet.cours
 
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
 import com.example.vmisu.projet.Cours
-
 import com.example.vmisu.projet.R
 import org.jetbrains.anko.find
+
+
+
 
 
 /**
@@ -37,6 +36,7 @@ class Cours_1 : Fragment(),   View.OnClickListener {
 
         return view
     }
+
 
     override fun onClick(v: View?) {
         when (v?.id) {

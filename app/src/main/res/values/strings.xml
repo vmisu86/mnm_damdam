@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Projet</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -7,6 +7,113 @@
     <string name="nav_header_desc">Projet Andoid MNM-DAMDAM</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Cours 1 Fragment</string>
+    <!-- Text Cours 1 -->
+    <string name="cours_1_title">ABC d’Android</string>
+    <string name="cours_1_hisoire_title">Histoire de Kotlin</string>
+    <string name="cours_1_hisoire_text" tools:ignore="StringEscaping">
+        C’est en 2010 que l’idée de Kotlin naît dans la tête des ingénieurs de l’entreprise JetBrains.
+        Ces derniers, voyant les limitations de conception que le langage Java causait sur le développement de leurs différents produits,
+        se sont mis à chercher un langage alternatif viable et pérenne, avec cependant une obligation : il devra être 100 % compatible avec le code Java existant.
+    </string>
+    <string name="cours_1_typage_title">Un langage statiquement typé</string>
+    <string name="cours_1_typage_text">
+        En fait, "statiquement typé" veut dire que le type (Integer, String, Boolean, etc.)
+        de chaque variable d’un programme est connu au moment de la compilation.
+        C’est notamment ce processus qui permet à votre IDE de vous faire part de son mécontentement via une belle erreur rouge,
+        quand vous tentez d’additionner un nombre avec une chaîne de caractères, par exemple…\n
+        Pour résumer, un langage "statiquement typé" comme Kotlin (ou Java) présente plusieurs avantages majeurs, comme :\n
+        &#8226; Performance : Comme les types sont connus au moment de la compilation, pas besoin de les "déduire" au moment de l’exécution du programme.\n
+        &#8226; Fiabilité : Le compilateur vous indique beaucoup plus d’erreurs au moment de la compilation, minimisant les chances que votre application crashe durant son exécution.\n
+        &#8226; Efficacité : Un langage statiquement typé permet de réaliser beaucoup plus facilement des "refactoring" et permet également la mise en place d’outils performants au sein de l’IDE comme "l’autocomplétion".
+    </string>
+    <string name="cours_1_resume_title">En résumé :</string>
+    <string name="cours_1_resume_text">
+        &#8226; Kotlin a été développé par Jetbrains dans l’objectif de pallier les limitations qu’imposait Java dans le développement de leurs différents produits.\n
+
+        &#8226; Kotlin est un langage de programmation qui se veut "concis", "sûr", "pragmatique" et "100% interopérable avec Java".\n
+
+        &#8226; Kotlin est un langage de programmation "statiquement typé" supportant néanmoins "l’inférence de type" grâce à son compilateur.\n
+
+        &#8226; Kotlin supporte la "programmation orientée objet" et la "programmation fonctionnelle".\n
+
+        &#8226; Kotlin est open source, supporte la plupart des IDEs et fonctionne sur la majorité des plateformes Java actuelles (où le bytecode JVM est accepté).\n
+    </string>
+
+    <!-- Text Cours 2 -->
+    <string name="cours_2_title">Utiliser la bibliothèque Anko</string>
+    <string name="cours_2_importer_title">Importer la bibliothèque Anko Commons</string>
+    <string name="cours_2_importer_text">
+        1. Placez vous dans le fichier gradle du projet build.gradle (Project: MyProject)\n
+        2. Ajoutez une variable contenant la version d’Anko Commons à utiliser:\n
+        \t &#8226; ext.anko_version = \'0.10.5\'\n
+        3. Placez vous dans le fichier gradle du module build.gradle (Module: app)\n
+        4.Ajoutez la dépendance Anko Commons dans le bloc approprié dependencies :\n
+        \t &#8226; dependencies {\n
+        \t\t implementation "org.jetbrains.anko:anko-common:$anko_version"\n
+        \t }\n
+    </string>
+    <string name="cours_2_afficher_title">Afficher un message rapide</string>
+    <string name="cours_2_afficher_text">
+        Afin de présenter des messages d’information rapide à l’utilisateur, le SDK Android fournit la classe Toast (cf. documentation officiel). Elle permet de créer un message avec makeText(), cette dernière prend 3 paramètres :\n
+        \t &#8226; le contexte de l’application (this depuis une Activity, activity depuis un Fragment)\n
+        \t &#8226; le message\n
+        \t &#8226; la durée d’affichage long ou court\n
+        Enfin, il s’agit d’afficher le message ainsi créé via la fonction show() (l’appel indispensable à ne pas oublier lorsqu’on code à la plage ;).\n
+        La bibliothèque Anko Commons simplifie cette tâche grâce à la fonction toast(), dont l’import correspond à import org.jetbrains.anko.toast.
+        Elle peut être appelée de manière indifférente depuis une Activity ou un Fragment, avec un seul paramètre (le texte à afficher).\n
+        Appelez la fonction toast() :
+        \t &#8226; toast(R.string.text_island)
+    </string>
+    <string name="cours_2_dialogue_title">Ouvrir une boite de dialogue</string>
+    <string name="cours_2_dialogue_text">
+        Appelez la fonction alert(), dont l’import correspond à import org.jetbrains.anko.alert, cela dans son plus simple appareil :\n
+        \t &#8226; alert("YO").show()
+    </string>
+    <string name="cours_2_email_title">Proposer d’envoyer un email</string>
+    <string name="cours_2_email_text">
+        Afin de proposer d’envoyer un email, à l’utilisateur, avec une application native, le SDK Android fournit la classe Intent avec un paramétrage spécifique.\n
+        La bibliothèque Anko Commons propose la fonction email(), dont l’import correspond à import org.jetbrains.anko.email.\n
+        Appelez la fonction email() :\n
+        \t &#8226; email("hello@chillcoding.com", getString(R.string.subject_feedback), "")
+    </string>
+    <string name="cours_2_exp_title">Retour d’expérience</string>
+    <string name="cours_2_exp_text">
+        Finalement, la bibliothèque Anko Commons offre des fonctions d’extensions et autres implémentations Kotlin intéressantes. En particulier, elle permet de programmer très rapidement les tâches utilisateurs les plus courantes :\n
+        \t &#8226; Voir un message rapide\n
+        \t &#8226; Interagir avec une boîte de dialogue\n
+        \t &#8226; Ouvrir un autre écran\n
+        \t &#8226; Voir une page Internet\n
+        \t &#8226; Envoyer un email\n
+        \t &#8226; Partager du contenu\n
+        Cela dit, il est important de savoir ce qu’il y a sous le capot (Cmd ou Ctrl + clique :) afin de connaître l’implémentation effectuée à partir du SDK Android. Parfois, il est nécessaire de mettre les mains dans le cambouis afin de développer une fonctionnalité plus évoluée, voir plus complexe. La connaissance du SDK Android est alors bienvenue.\n
+        Aussi, l’utilisation des fonctions Anko Commons peuvent être restreintes à un contexte spécifique, c’est-à-dire qu’elles peuvent être appelées depuis une Activity ou bien depuis un Fragment. Leur intégration dans une architecture spécifiquement alambiqué n’est alors pas forcément adéquate.\n
+    </string>
+
+    <!-- Text Cours 3 -->
+    <string name="cours_3_title">Outils du Développeur / Débugage</string>
+    <string name="cours_3_message_title">Message système et Débogage</string>
+    <string name="cours_3_message_text">
+        1. Console Logcat\n
+        2. Débogage du fichier R\n
+        3. Débogage pas à pas\n
+        4. Android Lint\n
+    </string>
+    <string name="cours_3_test_title">Tests</string>
+    <string name="cours_3_test_text">
+        \t &#8226; Point d’arrêt\n
+        \t &#8226; État variable\n
+        \t &#8226; Build > Clean\n
+        \t &#8226;  Run\n
+        \t &#8226; Erreur dans fenêtre de message\n
+        \t &#8226; Cherchez la ressource anormal\n
+        \t &#8226; Cherchez l’attribut XML erroné\n
+    </string>
+    <string name="cours_3_deploiement_title">Déploiement</string>
+    <string name="cours_3_deploiement_text">
+        \t &#8226; Ressources non utilisées\n
+        \t &#8226; Ressources non internationalisées\n
+        \t &#8226; Utilisation d’API non supportées\n
+        \t &#8226; etc
+    </string>
+
 </resources>

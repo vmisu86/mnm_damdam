@@ -4,12 +4,68 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
              tools:context=".cours.Cours_3">
+    <ScrollView android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffff">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp">
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                    android:id="@+id/cours_3_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_3_title"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+            <TextView
+                    android:id="@+id/message_title"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_3_message_title"/>
+            <TextView
+                    android:id="@+id/message_text"
+                    android:text="@string/cours_3_message_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <TextView
+                    android:id="@+id/test_title"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_3_test_title"/>
+            <TextView
+                    android:id="@+id/test_text"
+                    android:text="@string/cours_3_test_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <TextView
+                    android:id="@+id/dep_title"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_3_deploiement_title"/>
+            <TextView
+                    android:id="@+id/dep_text"
+                    android:text="@string/cours_3_deploiement_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Cours 3"/>
+        </LinearLayout>
+    </ScrollView>
     <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
