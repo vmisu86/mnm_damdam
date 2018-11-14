@@ -177,7 +177,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     <TextView
-                            android:text="Cours 4 3"
+                            android:text="Interface"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="18sp"
@@ -214,7 +214,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     <TextView
-                            android:text="Cours 5"
+                            android:text="Vues avancées"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="18sp"
@@ -249,7 +249,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     <TextView
-                            android:text="Cours 6"
+                            android:text="Adapter"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
                             android:textSize="18sp"

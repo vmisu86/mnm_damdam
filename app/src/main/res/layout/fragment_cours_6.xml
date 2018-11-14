@@ -5,11 +5,95 @@
              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
              tools:context=".cours.Cours_6">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Cours 6"/>
+    <ScrollView android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffff">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp">
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                    android:id="@+id/cours_6_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_6_title"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+            <TextView
+                    android:id="@+id/principe_title"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_6_principe_title"/>
+            <TextView
+                    android:id="@+id/pirncipe_text"
+                    android:text="@string/cours_6_principe_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <TextView
+                    android:id="@+id/view_title"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_6_view_title"/>
+            <TextView
+                    android:id="@+id/view_text"
+                    android:text="@string/cours_6_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <TextView
+                    android:id="@+id/grid_title"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_6_grid_title"/>
+            <TextView
+                    android:id="@+id/grid_text"
+                    android:text="@string/cours_6_grid_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <TextView
+                    android:id="@+id/spinner_title"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_6_spinner_title"/>
+            <TextView
+                    android:id="@+id/spinner_text"
+                    android:text="@string/cours_6_spinner_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <TextView
+                    android:id="@+id/viewpager_title"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/cours_6_viewpager_title"/>
+            <TextView
+                    android:id="@+id/viewpager_text"
+                    android:text="@string/cours_6_viewpager_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+        </LinearLayout>
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"

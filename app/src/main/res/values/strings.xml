@@ -116,4 +116,196 @@
         \t &#8226; etc
     </string>
 
+    <!-- Text Cours 4 -->
+    <string name="cours_4_title">Interface Utilisateur Native</string>
+    <string name="cours_4_vue_title">Vue</string>
+    <string name="cours_4_vue_text" tools:ignore="StringEscaping">
+        1. View, Activity, Fragment:\n
+        \n
+        View: \n
+        &#8226; View -> classe ancêtre de tous les composants graphiques \n
+        &#8226; Gestion de l\'affichage et des événements d\'une zone sur l\'écran \n
+        &#8226; ViewGroup : peut contenir des vues enfants (arbre de vues) \n
+        &#8226; Arbre de vues statique définissable en XML dans une ressource layout \n
+        &#8226;Package android.widget : vues et groupes de vues prédéfinis pour des usages courants \n
+        \n
+        Activity:\n
+        &#8226; Une activité (sous classe d’Activity) représente un unique écran de
+        l’UI d’une application Android\n
+        &#8226; Une application contient en général plusieurs activités. Par exemple,
+        une application de courriel : une activité pour la composition, une
+        activité pour la lecture, indépendante l’une de l’autre.\n
+        &#8226; Ces activités peuvent être lancées par d’autres applications. Par
+        exemple pour partager une image (gallery app) via un courriel(mailer app)\n
+        &#8226; Tout l’intérêt d’Android est de faciliter l’utilisation de l’ensemble des
+        composants présents dans le système, et donc notamment ndes
+        différentes activités fournies par les applications.\n
+        \n
+        Fragment:\n
+        Les fragments permettent de scinder vos activités en composants encapsulés et réutilisables qui possèdent leur propre cycle de vie et leur propre interface graphique.
+        Cela permet de mettre en place des I.H.M. évoluées qui s\'adaptent aux différents écrans et à leur orientation.\n
+        Quelques notions élémentaires concernant les fragments :\n
+        &#8226;Ils déportent une partie du traitement de l\'activité en leur sein ;\n
+        &#8226;Ils sont liés à une activité (ils n\'existent pas sans elle) ;\n
+        &#8226;Ils définissent la plupart du temps une interface graphique, mais peuvent aussi être utilisés pour retenir un
+        état lors de la destruction/reconstruction de leur activité parente (le bon vieux onRetainNonConfigurationInstance) ;\n
+        &#8226;Ils peuvent être statiques (définis une fois pour toutes dans le fichier de layout) ou dynamiques (créés, supprimés, ajoutés dynamiquement) ;\n
+        &#8226;Ils sont apparus à partir de HoneyComb (level 11) ainsi, pour les mettre en place avant HoneyComb, il faut utiliser la support-librairy ;\n
+        &#8226;Pour les utiliser, il faut un BuildSDK et un TragetSDK supérieur à 11 (cela tombe bien, vous devriez être à 19 à l\'heure où j\'écris ces lignes).\n
+        Les classes fondamentales pour la gestion des fragments sont : Fragment, FragmentManager et FragmentTransaction.\n
+    </string>
+    <string name="cours_4_resource_title">Ressource</string>
+    <string name="cours_4_resource_text" tools:ignore="StringEscaping">
+        Les ressources:\n
+        &#8226;Ressource : élément statique réutilisable\n
+        &#8226;Ressources définies dans des fichiers XML (ou binaires) dans res/ (noms de fichiers [a-z0-9_]+) :\n
+        \t&#8226; res/values : déclaration XML (avec i18n) de string, color, dimen, style &#8230;\n
+        \t&#8226;res/drawable : fichiers multimédias binaires (images, sons)\n
+        \t&#8226;res/layout : définition XML d\'agencements de vues graphiques (sous forme d\'arbre)\n
+        \t&#8226;res/anim : fichiers XML de définition d\'animations\n
+        \t\t&#8226;Animation d\'interpolation (changement de transparence, échelle, angle de rotation &#8230;)\n
+        \t\t&#8226;Animation pour séquences d\'images : liste des images avec leur durée d\'affichage\n
+        \t&#8226;res/xml : pour des fichiers XML divers\n
+        \t&#8226;res/raw : pour d\'autres ressources sous la forme de fichiers binaires\n
+    </string>
+    <string name="cours_4_graphique_title">Élément Graphique Natif</string>
+    <string name="cours_4_graphique_text" tools:ignore="StringEscaping">
+        Éléments de Graphique:\n
+        &#8226; TextView : affiche une chaîne\n
+        &#8226; EditText : permet la saisie d\'une chaîne (propriété inputType pour le type d\'entrée attendu)\n
+        &#8226; Button : bouton cliquable, variante de type interrupteur avec ToggleButton\n
+        &#8226; CheckBox : case à cocher\n
+        &#8226; RadioButton : bouton radio regroupable dans un RadioGroup\n
+        &#8226; CheckedTextView : chaîne cochable (implante Checkable)\n
+        &#8226; ProgressBar : barre de progression (horizontale, circulaire), variante avec étoiles de notation avec RatingBar\n
+        &#8226; SeekBar : barre de réglage\n
+        &#8226; SearchView : champ de recherche avec proposition de suggestions\n
+        &#8226; ImageView : affichage d\'une ressource image\n
+        &#8226; ImageButton : bouton avec image\n
+        &#8226; VideoView : affichage contrôlable de vidéo\n
+    </string>
+    <string name="cours_4_navigation_title">Élément de Navigation</string>
+    <string name="cours_4_navigation_text" tools:ignore="StringEscaping">
+        Types de menu :\n
+        &#8226; Menu d\'options : obtenu depuis un bouton physique ou la barre d\'action ; y résident les actions principales de l\'application (navigation, paramétrage, recherche&#8230;)\n
+        &#8226; Menu contextuel ou popup : obtenu depuis un clic long sur un élément de vue pour proposer des choix spécifiques\n
+        &#8226; Événement de sélection d\'item de menu : onMenuItemClick(MenuItem item) ou Activity.onOptionsItemSelected(MenuItem item) ; il faut tester l\'item sélectionné avec un switch (en utilisant par exemple item.getItemId())\n
+        ActionBar :\n
+        &#8226; Barre d\'action en haut d\'écran apparue depuis Android 3.0 (API11), récupérable avec Activity.getActionBar()\n
+        &#8226; Permet la navigation dans une application, son paramétrage ainsi que de lancer des actions\n
+        &#8226; Barre peuplable en redéfinissant Activity.onCreateOptionsMenu(Menu menu)\n
+        &#8226; Généralement on charge un menu défini par une ressource XML (utilisation de MenuInflater)\n
+        Éléments de navigation\n
+        &#8226; Retour top (logo haut gauche)\n
+        \t&#8226; remplaçable par une icône haut avec actionBar.setDisplayHomeAsUpEnabled(true)\n
+        \t&#8226; Clic récupérable avec onOptionsItemSelected() avec l\'ID android.R.id.home\n
+        \t&#8226; Utile pour revenir à l\'activité principale :\n
+        \t&#8226; Intent intent = new Intent(this, HomeActivity.class); intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); startActivity(intent);\n
+        &#8226; Onglets\n
+        \t&#8226; Instantiation d\'un ActionBar.Tab, setText…, setIcon…\n
+        \t&#8226; Création d\'un TabListener (code exécuté lors du choix du tab, typiquement chargement de Fragment) et enregistrement avec Tab.setTabListener()\n
+        \t&#8226; Ajout dans la Bar avec Bar.addTab(Tab tab)\n
+       Items d\'action\n
+        &#8226;Vue pour un item\n
+        \t&#8226; Classiquement : icône + texte\n
+        \t&#8226; Choix d\'une vue personnalisée avec android:actionViewClass\n
+        &#8226;Affichage dans l\'ActionBar configurable avec android:showAsAction (ifRoom, withText, never, collapseActionView)\n
+        &#8226;Certaines vues (comme SearchView) proposent deux versions (réduites et étendue) avec CollapsibleActionView\n
+        &#8226;ActionProvider : définition d\'item avec action prédéfinie (e.g. ShareActionProvider pour partager un élément de différentes façons); propriété android:actionProviderClass\n
+    </string>
+    <string name="cours_4_design_title">Material Design</string>
+    <string name="cours_4_design_text" tools:ignore="StringEscaping">
+        Le Material Design est un ensemble de règles de design proposées par Google et qui s\'appliquent à l\'interface graphique des logiciels et applications.\n
+        Il est utilisé notamment à partir de la version 5.0 du système d\'exploitation Android.\n
+        Google a présenté le Material Design pour la première fois lors de la conférence Google I\/O, le 25 juin 20143.
+        En misant sur les motifs \« carte \», déjà utilisés dans Google Now, ces règles de design mettent l\'accent sur une utilisation accrue des mises en page
+        basées sur une grille, des animations et des transitions, des effets de profondeur tels l\'éclairage et les ombres. Selon Google ce nouveau langage de design est basé sur le papier et l\'encre.\n
+        Le designer Matías Duarte explique que contrairement au vrai papier, notre matériau numérique peut s\'étirer et se modifier de manière intelligente.
+        Le matériau contextuel a une surface physique et des bords. Les superpositions et les ombres donnent des informations sur ce que vous pouvez toucher.\n
+        Ce design d\'interface utilisateur succède au design Holo utilisé par Android de la version 4.0 à la version 4.4.\n
+    </string>
+
+    <!-- Text Cours 5 -->
+    <string name="cours_5_title">Les vues avancées</string>
+    <string name="cours_5_web_title">WebView</string>
+    <string name="cours_5_web_text" tools:ignore="StringEscaping">
+        &#8226; Vue d\'affichage de contenu HTML avec la bibliothèque de rendu WebKit\n
+        &#8226;Permet d\'embarquer un véritable navigateur web dans une application ; bridage possible depuis WebView.getSettings() :\n
+        \t &#8226;setJavaScriptEnabled(false) pour désactiver JavaScript\n
+        \t &#8226;setPluginState(PluginState.OFF) pour désactiver les plugins\n
+        \t &#8226;setAllowContentAccess(false) pour désactiver le chargement d\'URL\n
+        \t &#8226;setAllowFileAccess(false) pour désactiver le chargement de fichiers locaux\n
+        &#8226; Utilisation :\n
+        \t &#8226;loadData(String data, String mimeType, String encoding) : affiche un contenu directement spécifié\n
+        \t &#8226;loadUrl(String url) : charge le contenu à l\'URL spécifiée\n
+        &#8226;Utile pour créer une application Android/HTML5/JavaScript hybride : communication d\'un objet Java à un script JavaScript avec addJavaScriptInterface(Object object, String name)\n
+        &#8226;Interception des clics sur liens hypertextes en créant une classe dérivée redéfinissant shouldOverrideUrlLoading()\n
+    </string>
+    <string name="cours_5_widget_title">Widgets composés à usage spécifique</string>
+    <string name="cours_5_widget_text" tools:ignore="StringEscaping">
+        Pour formulaire : facilite l\'entrée de données communes dans des formulaires et permet la validation\n
+        &#8226;TimePicker, DatePicker : choix d\'horaire et de date\n
+        &#8226;CalendarView: affiche un calendrier avec date sélectionnable\n
+        &#8226;NumberPicker : sélection d\'un entier dans un intervalle avec incrémentation et décrémentation\n
+        &#8226;DialerFilter : permet de saisir des chiffres/lettres avec un clavier numérique de téléphone\n
+        &#8226;Pour activité multimédia :\n
+        \t&#8226;MediaController : offre des boutons de contrôle pour une vidéo (avec VideoView par exemple)\n
+        \t&#8226;ZoomControls : bouton de zoom/dezoom\n
+    </string>
+    <string name="cours_5_widget2_title">Widgets inter-applicatifs</string>
+    <string name="cours_5_widget2_text" tools:ignore="StringEscaping">
+    Widget : composant graphique d\'une application embarquable dans une autre application\n
+        &#8226;À ne pas confondre avec les widgets précédents !\n
+        &#8226;Utilisation typique par intégration sur l\'écran d\'accueil\n
+        &#8226;Principaux types de widgets :\n
+        \t&#8226; Widgets d\'information affichant certaines données de l\'application (par exemple prévisions météo, trafic routier&#8230;)\n
+        \t&#8226;Widgets de contrôle permettant d\'agir sur l\'application sans ouvrir de nouvelle activité (lancer des actions, changer un état&#8230;)\n
+        \t&#8226; Widget de parcours de collections permettant d\'itérer sur des éléments (visualisation de gallerie photo par exemple)\n
+    </string>
+
+    <!-- Text Cours 6 -->
+    <string name="cours_6_title">Les vues basées sur des adaptateurs</string>
+    <string name="cours_6_principe_title">Principe</string>
+    <string name="cours_6_principe_text" tools:ignore="StringEscaping">
+        Classes dérivées de AdapterView\n
+        &#8226;Adapter est un modèle permettant d\'obtenir les vues enfants à afficher\n
+        \t&#8226;getView(int i, View convertView, ViewGroup parent) permet d\'obtenir la vue à afficher pour l\'enfant #i (implantations par défaut utilisant un TextView)\n
+        &#8226;Adapteurs pré-définis :\n
+        \t&#8226;ArrayAdapter : stockage d\'une liste d\'éléments\n
+        \t&#8226;SimpleCursorAdapter : modèle adaptant les données d\'un Cursor de BDD\n
+    </string>
+    <string name="cours_6_view_title">ListView et GridView (AbsListView)</string>
+    <string name="cours_6_view_text" tools:ignore="StringEscaping">
+        &#8226;ListView : affichage d\'une liste avec défilement vertical puisant ses éléments dans un ListAdapter (classe dérivée avec liste à deux niveaux : ExpandableListView)\n
+        &#8226;GridView : affichage sur une grille avec défilement vertical\n
+        &#8226;Attributs intéressants : columnWidth, gravity (alignement de l\'enfant dans la cellule), numColumns, stretchMode\n
+        &#8226;Possibilité d\'agir sur les évènements de défilement : setOnScrollListener(ScrollListener l)\n
+    </string>
+    <string name="cours_6_grid_title">GridView des versions d\'Android</string>
+    <string name="cours_6_grid_text" tools:ignore="StringEscaping">
+        &#8226;Objectif : afficher en grille les différentes versions d\'Android\n
+        &#8226;Récupération des versions d\'Android par introspection sur Build.VERSION_CODES (consultation des champs statiques)\n
+        &#8226;Affichage de chaque version en utilisant un layout personnalisé :\n
+        \t&#8226;Création du layout dans un fichier XML (LinearLayout avec deux TextView)\n
+        \t&#8226;Chargement du layout XML avec le LayoutInflater en redéfinissant la méthode getView() de l\'adapter placé sur la GridView\n
+        \t&#8226;Appels de setText pour définir le nom de la version et le numéro d\'API\n
+        \t&#8226;Choix d\'une couleur aléatoire pour le fond du LinearLayout (lorsque la cellule est rafraîchie la couleur peut changer !)\n
+    </string>
+    <string name="cours_6_spinner_title">Spinner</string>
+    <string name="cours_6_spinner_text" tools:ignore="StringEscaping">
+        &#8226; Champ de texte avec menu déroulant pour choix d\'un item unique\n
+        &#8226; Éléments de choix fournis par un SpinnerAdapter (interface implantée par ArrayAdapter)\n
+        &#8226; Réaction à l\'élément choisi avec un onItemSelectedListener\n
+    </string>
+    <string name="cours_6_viewpager_title">ViewPager</string>
+    <string name="cours_6_viewpager_text" tools:ignore="StringEscaping">
+        &#8226; Maintient une liste de vues parcourable par un geste de swipe\n
+        &#8226; Les vues à afficher sont fournies par un PagerAdapter (ViewPager.setAdapter()) qui est responsable de l\'ajout et de la suppression d\'éléments dans le ViewPager :\n
+        \t&#8226;Object instantiateItem(ViewGroup parent, int position) : méthode appelée lorsque la vue doit être installée dans le ViewGroup parent (doit faire l\'installation) ; retourne un objet qui est une clé représentant l\'item\n
+        \t&#8226;void destroyItem(ViewGroup parent, int pos, Object o) : méthode appelée pour la destruction d\'un item (désinstalle du ViewGroup)\n
+        \t&#8226; int getCount() : retourne le nombre d\'items dans l\'adapter\n
+        \t&#8226; boolean isViewFromObject(View view, Object o) : permet d\'indiquer si la vue et l\'objet passés en paramètre sont liés (l\'objet représentant une clé pour la vue)\n
+        &#8226;Version spécifique de PagerAdapter utilisant des fragments : FragmentPagerAdapter\n
+        \t&#8226;Fragment getItem(int pos) : méthode abstraite à redéfinir\n
+    </string>
 </resources>
