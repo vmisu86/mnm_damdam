@@ -35,10 +35,8 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="ffffff" />
-                                      <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="C:\Users\vmisu\Desktop\15270874906381_compiler_schema.png" />
-                                      <entry key="foregroundLayerName" value="ic_compile_schema_fore" />
-                                      <entry key="outputName" value="ic_compile_schema" />
+                                      <entry key="foregroundImage" value="C:\Users\vmisu\Desktop\lancher_icon.png" />
+                                      <entry key="foregroundLayerName" value="ic_compile_schema_foreground" />
                                     </map>
                                   </option>
                                 </PersistentState>
