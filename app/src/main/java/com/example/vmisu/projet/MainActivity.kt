@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 replace(List())
             }
             R.id.nav_fragment -> {
-            replace(Fragment())
+            replace(NumberPicker())
             }
             R.id.nav_send -> {
                 val send = Intent(this, Send::class.java)

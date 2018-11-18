@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Send">
+        <activity android:name=".Send" android:parentActivityName=".MainActivity">
         </activity>
     </application>
 

@@ -22,8 +22,8 @@
                 android:title="Liste"/>
         <item
                 android:id="@+id/nav_fragment"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="Fragment"/>
+                android:icon="@drawable/ic_confirmation_number_black_24dp"
+                android:title="NumberPicker"/>
     </group>
 
     <item android:title="Communicate">

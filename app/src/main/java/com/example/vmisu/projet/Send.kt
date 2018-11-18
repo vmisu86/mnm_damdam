@@ -1,29 +1,23 @@
 package com.example.vmisu.projet
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.IBinder
-import android.support.design.widget.NavigationView
-import android.support.v4.app.Fragment
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Toast
-import com.example.vmisu.projet.tool.replace
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_send.*
-import kotlinx.android.synthetic.main.app_bar_main.*
 import java.lang.Exception
 
 class Send : AppCompatActivity(){
 
+    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_send)
 
+        supportActionBar!!.title = "Back"
+        supportActionBar!!.setDefaultDisplayHomeAsUpEnabled(true)
 
         // btn click to get input and call sendEmail methode
         sendEmailBtn.setOnClickListener{
@@ -33,6 +27,7 @@ class Send : AppCompatActivity(){
 
             //methode call for email intent with these inputs as parameters
             sendEmail(recipient,subject,message)
+
         }
     }
 
