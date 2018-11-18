@@ -19,7 +19,7 @@ class CustomView : View {
         init()
     }
 
-    var mCircle = MagicCircle(800F,600F)
+    var mCircle = MagicCircle(900F,2000F)
 
     companion object {
         val DELTA = 8

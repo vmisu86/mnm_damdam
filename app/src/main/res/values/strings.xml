@@ -375,4 +375,39 @@
         &#8226;Version spécifique de PagerAdapter utilisant des fragments : FragmentPagerAdapter\n
         \t&#8226;Fragment getItem(int pos) : méthode abstraite à redéfinir\n
     </string>
+    <string name="architecture_title">
+        Les cycles de vie d\'une application
+    </string>
+    <string name="architecture">
+        Cet écran permet de constater toutes les étapes d\'une « Activity » lors de tous ces cycles, de la création quand on le lance à la destruction quand on ferme \'application, ou dans ce cas, le fragment.\n
+        \n
+        override fun onCreateView{&#8230;\n
+        info("ON CREATE")\n
+        }\n
+        \n
+        override fun onStart() {\n
+        super.onStart()\n
+        info("ON START")\n
+        }\n
+        \n
+        override fun onResume() {\n
+        super.onResume()\n
+        info("ON RESUME")\n
+        }\n
+        \n
+        override fun onPause() {\n
+        super.onPause()\n
+        info("ON PAUSE")\n
+        }\n
+        \n
+        override fun onStop() {\n
+        super.onStop()\n
+        info("ON STOP")\n
+        }\n
+        \n
+        override fun onDestroy() {\n
+        super.onDestroy()\n
+        info("ON DESTROY")\n
+        }\n
+    </string>
 </resources>
