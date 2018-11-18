@@ -13,8 +13,8 @@ Le projet a été conçu dans l'objectif de résumer tous les cours que nous avo
 
 ### Fragment : Cours
 
-[Image Cours 1](img/1.png)
-[Image Cours 2](img/2.png)
+[Image Cours 1](https://raw.githubusercontent.com/vmisu86/mnm_damdam/master/img/1.png)
+[Image Cours 2](https://raw.githubusercontent.com/vmisu86/mnm_damdam/master/img/2.png)
 
 Cet écran permet de visualiser les cours que nous avons effectuer durant notre cursus Android. 
 
@@ -24,32 +24,32 @@ Cet écran permet de constater toutes les étapes d'une « Activity » lors de t
 
 ### Fragment : Magic Ball 
 
-[Image Magic Ball](img/3.png)
+[Image Magic Ball](https://raw.githubusercontent.com/vmisu86/mnm_damdam/master/img/3.png)
 
 Cet écran permet de visualiser des intéractions d'animations grâce à une « Magic Ball » qui rebondi aux bords de l'écran sans jamais n'en sortir.
 
 ### Fragment : Liste
 
-[Image Liste](img/4.png)
+[Image Liste](https://raw.githubusercontent.com/vmisu86/mnm_damdam/master/img/4.png)
 
 Cet écran permet d'observer comment est construit une liste dans une application Android à l'aide de RecycleView. 
 
 ### Fragment : NumberPicker
 
-[Image Number Picker 1](img/5.png)
-[Image Number Picker 2](img/6.png)
+[Image Number Picker 1](https://raw.githubusercontent.com/vmisu86/mnm_damdam/master/img/5.png)
+[Image Number Picker 2](https://raw.githubusercontent.com/vmisu86/mnm_damdam/master/img/6.png)
 
 Cet écran permet de constater comment utiliser le NumberPicker native d'Android. Cependant, nous avons bien réussi à palier une difficulté qui était la réinitialisation du chiffre choisi lors d'un changement de format « Paysage » ou « Portait ». 
 
 ### Activity : Send
 
-[Image Number Picker 2](img/7.png)
+[Image Number Picker 2](https://raw.githubusercontent.com/vmisu86/mnm_damdam/master/img/7.png)
 
 Cet écran permet d'envoyer un email. 
 
 ### Menu
 
-[Image Menu](img/8.png)
+[Image Menu](https://raw.githubusercontent.com/vmisu86/mnm_damdam/master/img/8.png)
 
 Ce petit « Side Menu » nous permet d'accéder à tous les Fragments et Activity du projet Android.
 
